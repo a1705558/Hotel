@@ -1,0 +1,86 @@
+div.header
+{
+	height: 120px;
+	width: 100%;
+	background-image: url("beach.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	padding: 0px;
+	margin: 0px;
+	background-position: 0% 70%;
+	z-index:-1;
+	border-bottom-width:5px;
+	border-bottom-color: darkgrey;
+	border-bottom-style: solid;
+}
+
+div.logo
+{
+	height: 120px;
+	width: 120px;
+	top:0px;
+	right:0px;
+	position: absolute;
+	background-color: blue;
+	position:right top;
+}
+
+div.logo:hover
+{
+	background-color: purple;
+}
+
+div.navbar
+{
+	position:-webkit-sticky;
+	position: sticky;
+	background-color: lightgrey;
+	float: left;
+	font-size: 20px;
+	text-align: center;
+	width:20%;
+	top:0;
+}
+
+#content
+{
+	clear:right;
+	margin-left:25%;
+	margin-right:5%;
+	background-color:green;
+	border-style:solid;
+	border-color:darkgrey;
+	border-width: 5px;
+	border-top-width:0px;
+	padding: 10px;
+}
+
+ul.nav
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: lightgrey;
+}
+
+ul.nav li a
+{
+	text-decoration: none;
+	display:block;
+	border-bottom-style: solid;	
+	border-bottom-color: black;
+	height:45px;
+	color:black;
+}
+
+ul.nav li a:hover
+{
+	background-color: black;
+	color:white;
+}
+
+.normal
+{
+	padding: 0px;
+	margin: 0px;
+}
