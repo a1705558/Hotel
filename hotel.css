@@ -1,0 +1,159 @@
+body
+{
+	background-image: url("water.jpg");
+	background-repeat: no-repeat;
+	
+}
+
+div.header
+{
+	height: 120px;
+	width: 100%;
+	background-image: url("beach.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	padding: 0px;
+	margin: 0px;
+	background-position: 0% 70%;
+	z-index:-1;
+	border-bottom-width:5px;
+	border-bottom-color: darkgrey;
+	border-bottom-style: solid;
+}
+
+div.logo
+{
+	height: 120px;
+	width: 120px;
+	top:0px;
+	right:0px;
+	position: absolute;
+	background-color: blue;
+	position:right top;
+}
+
+div.logo:hover
+{
+	background-color: purple;
+}
+
+div.navbar
+{
+	position:-webkit-sticky;
+	position: sticky;
+	background-color: lightgrey;
+	float: left;
+	font-size: 20px;
+	text-align: center;
+	width:20%;
+	top:0;
+}
+
+#content
+{
+	clear:right;
+	margin-left:25%;
+	margin-right:5%;
+	background-color:green;
+	border-style:solid;
+	border-color:darkgrey;
+	border-width: 5px;
+	border-top-width:0px;
+	padding: 10px;
+}
+
+#ocontent
+{
+	clear:right;
+	margin-left:25%;
+	margin-right:5%;
+	padding: 10px;
+}
+
+div.oheading
+{
+	background-color:black;
+	font-family: sans-serif;
+	font-color: white;
+	margin: 5px;
+	max-width:250px;
+	text-align: center;
+}
+
+div.offer
+{
+	float: left;
+	clear: right;
+	background-color:black;
+	height:300px;
+	width:300px;
+	border-style:solid;
+	border-radius: 5px;
+	border-color:white;
+	margin:20px;
+}
+
+div.inoffer
+{
+	background-image:url("effiel.jpg");
+	background-size: 292px 292px;
+	margin:3px;
+	border-style:solid;
+	border-color:white;
+	border-radius:5px;
+	border-width: 1px;
+	height:292px;
+}
+
+img.offer
+{
+	margin:3px;
+	border-style:solid;
+	border-color:white;
+	border-radius:5px;
+	border-width: 1px;
+	height:292px;
+	width:292px;
+}
+
+#sign
+{
+	display:none;
+}
+
+#log
+{
+	display:none;
+}
+
+ul.nav
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: lightgrey;
+}
+
+ul.nav li a
+{
+	text-decoration: none;
+	display:block;
+	border-bottom-style: solid;	
+	border-bottom-color: black;
+	color:black;
+	<!--maybe-->
+	height:10%;
+	font-size: 2vw;	
+}
+
+ul.nav li a:hover
+{
+	background-color: black;
+	color:white;
+}
+
+.normal
+{
+	padding: 0px;
+	margin: 0px;
+}
