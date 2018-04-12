@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="hotel.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="hotel.js"></script>
+	<title>Account</title>
+</head>
+<body class="normal">
+	<div class="logo" onclick="location.href = 'hotel.html'"></div>
+	<div class="header"></div>
+	<div class="navbar">
+		<ul class="nav">
+			<li><a href="hotel.html">Home</a></li>
+			<li><a href="destinations.html">Destinations</a></li>
+			<li><a href="offers.html">Offers</a></li>
+			<li><a href="account.html">Account</a></li>
+			<li><a href="#about">About</a></li>
+			<li><input type="text" placeholder="Search..."></li>
+		</ul>
+	</div>
+	<div id="content">
+		<div id="account">
+			<h1>Account:</h1>
+			<button onclick="sign()">sign up</button>
+			<button onclick="log()">login</button>
+		</div>
+		<div id="sign">
+			<h1>Sign Up</h1>
+				<p>First name:</p>
+				<input type="text" id="firstname" style="max-width: 25em" required><br>
+				<p>Last name:</p>
+				<input type="text" id="lastname" style="max-width: 25em" required><br>
+				<p>Email address:</p>
+				<input type="email" id="email" style="max-width: 30em" required><br>
+				<p>Password:</p>
+				<input type="password" id="password" style="max-width: 15em" required><br>
+				<p>Phone Number:</p>
+				<input type="text" id="number" style="max-width: 12em" maxlength="12"><br>
+				<p>Address:</p>
+				<input type="text" id="address" style="max-width: 35em"><br>
+				<!-- <input type="radio" name="gender" value="male" checked> Male<br>
+	  			<input type="radio" name="gender" value="female"> Female<br>
+	  			<input type="radio" name="gender" value="other"> Other<br> -->
+	  			<br>
+	  			<button>Sign Up</button>
+			<p>Already have an account?</p>
+			<button onclick="log()">login</button>
+		</div>
+		<div id="log">
+			<h1>Log In</h1>
+				<p>Email address:</p>
+				<input type="email" id="uemail" style="max-width: 25em" required><br>
+				<p>Password:</p>
+				<input type="password" id="upassword" style="max-width: 15em" required><br>
+				<input type="submit" value="Submit">
+			<p>Don't have an account?</p>
+			<button onclick="sign()">sign up</button>
+		</div>
+		<div id="info">
+			<h1>My Account:</h1>
+			<div id="infoArea"></div>
+			<h1>My Bookings:</h1>
+			<div id="bookingArea"></div>
+			<button>Sign into another account</button>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="hotel.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="hotel.js"></script>
+	<title>Hotel Website</title>
+</head>
+<body class="normal">
+	<div class="logo" onclick="location.href = 'hotel.html'"></div>
+	<div class="header"></div>
+	<div class="navbar">
+		<ul class="nav">
+			<li><a href="hotel.html">Home</a></li>
+			<li><a href="destinations.html">Destinations</a></li>
+			<li><a href="offers.html">Offers</a></li>
+			<li><a href="account.html">Account</a></li>
+			<li><a href="#about">About</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<div id="searchBar">
+			<p>Start Date:</p>
+			<input type="date" id="start">
+			<p>End Date:</p>	
+			<input type="date" id="end">
+			<p>Country:</p>
+			<input id="country" type="text" name="country" required>
+			<p>Number of rooms:</p>
+			<input id="rooms" type="number" name="rooms">
+			<p>Price:</p>
+			<input id="price" type="number" name="price">
+			<button>Search!</button>
+		</div>
+	</div>
+	<div id="places"></div>
+	<div id="extendInfo"></div>
+	<div id="booking"></div>
+	<div id="confirmation"></div>
+</body>
+</html>

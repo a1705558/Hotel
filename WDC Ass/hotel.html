@@ -2,21 +2,26 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="hotel.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="hotel.js"></script>
 	<title>Hotel Website</title>
 </head>
 <body class="normal">
-	<div class="logo"></div>
+	<div class="logo" onclick="location.href = 'hotel.html'"></div>
 	<div class="header"></div>
 	<div class="navbar">
 		<ul class="nav">
-			<li><a href="#dest">Destinations</a></li>
-			<li><a href="#offer">Offers</a></li>
-			<li><a href="#event">Events</a></li>
-			<li><a href="#account">Account</a></li>
+			<li><a href="hotel.html">Home</a></li>
+			<li><a href="destinations.html">Destinations</a></li>
+			<li><a href="offers.html">Offers</a></li>
+			<li><a href="account.html">Account</a></li>
 			<li><a href="#about">About</a></li>
+			<li><input class="search" type="text" placeholder="Search..."></li>
 		</ul>
 	</div>
-	<div id="content">
+	<div class="homecontent">
 		<p>Հայերեն Shqip ‫العربية‫العربية   Български Català 中文简体 Hrvatski Česky Dansk Nederlands English Eesti Filipino Suomi Français ქართული Deutsch Ελληνικά ‫עברית‫עברית   हिन्दी Magyar Indonesia Italiano Latviski Lietuviškai македонски Melayu Norsk Polski Português Româna Pyccкий Српски Slovenčina Slovenščina Español Svenska ไทย Türkçe Українська Tiếng Việt
 Lorem Ipsum
 "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
@@ -35,8 +40,10 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 
 Where can I get some?
 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-
-
+</p>
+</div>
+<div class="homecontent">
+<p>
 5
 	paragraphs
 	words

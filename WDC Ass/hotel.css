@@ -1,17 +1,67 @@
+body
+{
+	background-image: url("pictures/buildings.jpg");
+	height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+p
+{
+	font-family:Maven Pro;
+}
+
+li
+{
+	font-family:Maven Pro;
+}
+
+h1
+{
+	font-family:Rubik;
+}
+
+h3
+{
+	font-family:Rubik;
+}
+
+form
+{
+	font-family:Maven Pro;
+}
+
+input
+{
+	font-family: Maven Pro;
+}
+
+input.search
+{
+	margin-top:8px;
+	border-radius:5px;
+	border-style:none;
+}
+
 div.header
 {
 	height: 120px;
 	width: 100%;
-	background-image: url("beach.jpg");
+	background-image: url("pictures/glenelg.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
 	padding: 0px;
 	margin: 0px;
-	background-position: 0% 70%;
+	background-position: 0% 35%;
 	z-index:-1;
-	border-bottom-width:5px;
-	border-bottom-color: darkgrey;
-	border-bottom-style: solid;
+	/*border-bottom-width:1px;
+	border-bottom-color: #0074D9;
+	border-bottom-style: solid;*/
 }
 
 div.logo
@@ -21,7 +71,7 @@ div.logo
 	top:0px;
 	right:0px;
 	position: absolute;
-	background-color: blue;
+	background-color: #7FDBFF;
 	position:right top;
 }
 
@@ -34,25 +84,125 @@ div.navbar
 {
 	position:-webkit-sticky;
 	position: sticky;
-	background-color: lightgrey;
-	float: left;
+	background-color: aqua;
+	/*float: left;*/
 	font-size: 20px;
 	text-align: center;
-	width:20%;
+	z-index:1;
+	/*border-bottom-style: solid;	
+	border-bottom-color: black;
+	border-bottom-width:1px;*/
+	/*width:20%;*/
 	top:0;
 }
 
 #content
 {
 	clear:right;
-	margin-left:25%;
-	margin-right:5%;
-	background-color:green;
+	margin-top:400px;
+	margin-bottom:140px;
+	/*margin-left:15%;
+	margin-right:15%;*/
+	background-color:white;
 	border-style:solid;
-	border-color:darkgrey;
-	border-width: 5px;
+	border-color:black;
+	border-width: 1px;
 	border-top-width:0px;
 	padding: 10px;
+	text-align:center;
+	z-index:0;
+
+}
+
+.homecontent
+{
+	clear:right;
+	margin-top:400px;
+	margin-bottom:140px;
+	padding: 10px;
+	padding-left:5%;
+	padding-right:5%;
+	background-color:white;
+	border-style:solid;
+	border-color:black;
+	border-width: 1px;
+	border-top-width:0px;
+	
+	text-align:center;
+	z-index:0;
+
+}
+
+#ocontent
+{
+	clear:right;
+	margin-top:400px;
+	margin-bottom:400px;
+	/*margin-left:15%;
+	margin-right:15%;*/
+	padding: 10px;
+
+}
+
+div.oheading
+{
+	background-color:black;
+	font-family: sans-serif;
+	font-color: white;
+	margin: 5px;
+	max-width:250px;
+	text-align: center;
+}
+
+div.offer
+{
+	float: left;
+	clear: right;
+	background-color:black;
+	height:300px;
+	width:300px;
+	border-style:solid;
+	border-radius: 5px;
+	border-color:white;
+	margin:20px;
+}
+
+div.inoffer
+{
+	background-image:url("pictures/effiel.jpg");
+	background-size: 292px 292px;
+	margin:3px;
+	border-style:solid;
+	border-color:white;
+	border-radius:5px;
+	border-width: 1px;
+	height:292px;
+}
+
+img.offer
+{
+	margin:3px;
+	border-style:solid;
+	border-color:white;
+	border-radius:5px;
+	border-width: 1px;
+	height:292px;
+	width:292px;
+}
+
+#sign
+{
+	display:none;
+}
+
+#log
+{
+	display:none;
+}
+
+#info
+{
+	display: none;
 }
 
 ul.nav
@@ -60,27 +210,76 @@ ul.nav
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	background-color: lightgrey;
+	overflow: hidden;
+	background-color:#0074D9;
+	color:#7FDBFF;
 }
 
 ul.nav li a
 {
 	text-decoration: none;
-	display:block;
-	border-bottom-style: solid;	
+	display:inline-block;
+	float: left;
+
+	/*border-bottom-style: solid;	
 	border-bottom-color: black;
-	height:45px;
-	color:black;
+	border-bottom-width:1px;*/
+	color:white;
+	padding: 5px 6.5%;
+	/*margin: 0px 15px;*/
+	/*
+	height:10%;
+	font-size: 2vw;	*/
 }
 
 ul.nav li a:hover
 {
-	background-color: black;
-	color:white;
+	background-color:#7FDBFF;
+	color:#0074D9;
 }
 
 .normal
 {
 	padding: 0px;
 	margin: 0px;
+}
+
+#searchBar
+{
+	background-color:aqua;
+	margin-top:5px;
+	margin-left: -10px;
+	margin-right: -10px;
+	padding:10px;
+}
+
+#places
+{
+	margin-top:40px;
+	background-color:white;
+	padding:20px;
+}
+
+#extendInfo
+{
+	display:none;
+	margin-top:40px;
+	background-color:white;
+	padding:20px;
+}
+
+#booking
+{
+	display:none;
+	margin-top:40px;
+	background-color:white;
+	padding:20px;
+}
+
+#confirmation
+{
+	display:none;
+	margin-top:40px;
+	background-color:white;
+	padding:20px;
 }
