@@ -1,6 +1,6 @@
 body
 {
-	background-image: url("pictures/buildings.jpg");
+	background-image: url("Pictures/buildings.jpg");
 	height: 500px; 
 
     /* Create the parallax scrolling effect */
@@ -52,7 +52,7 @@ div.header
 {
 	height: 120px;
 	width: 100%;
-	background-image: url("pictures/glenelg.jpg");
+	background-image: url("Pictures/glenelg.JPG");
 	background-repeat: no-repeat;
 	background-size: 100%;
 	padding: 0px;
@@ -169,7 +169,7 @@ div.offer
 
 div.inoffer
 {
-	background-image:url("pictures/effiel.jpg");
+	background-image:url("Pictures/effiel.jpg");
 	background-size: 292px 292px;
 	margin:3px;
 	border-style:solid;
