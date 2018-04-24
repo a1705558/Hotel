@@ -14,23 +14,24 @@ function sign()
 }
 
 //Creates a booking object
-function Booking(Place, Country, Price, Avaliable, Description)
+function Booking(Place, Country, Price, Avaliable, Description, Location)
 {
 	this.place = Place;
 	this.country = Country;
 	this.price = Price;
 	this.avliability = Avaliable;
 	this.description = Description;
+	this.location = Location;
 }
 
-var Sydney = new Booking("Sydney", "Australia", 350, 10, "It's in Sydney");
-var NewYork = new Booking("New York", "America", 430, 3, "It's in New York");
-var Melbourne = new Booking("Melbourne", "Australia", 400, 5, "It's in Melbourne");
-var Madrid = new Booking("Madrid", "Spain", 380, 7, "It's in Madrid");
-var LosAngeles = new Booking("Los Angeles", "America", 400, 7, "It's in LA");
-var Barcelona = new Booking("Barcelona", "Spain", 320, 20, "It's in Barcelona");
-var Adelaide = new Booking("Adelaide", "Australia", 200, 30, "It's in Adelaide");
-var Vegas = new Booking("Las Vegas", "America", 420, 15, "It's in Las Vegas");
+var Sydney = new Booking("Sydney", "Australia", 350, 10, "It's in Sydney", {lat: -33.8435473, lng: 151.2413418});
+var NewYork = new Booking("New York", "America", 430, 3, "It's in New York", {lat: 40.767778, lng: -73.9718335});
+var Melbourne = new Booking("Melbourne", "Australia", 400, 5, "It's in Melbourne", {lat: 28.2249886, lng: -80.71385559999999});
+var Madrid = new Booking("Madrid", "Spain", 380, 7, "It's in Madrid", {lat: 40.4089785, lng: -3.761460599999964});
+var LosAngeles = new Booking("Los Angeles", "America", 400, 7, "It's in LA", {lat: 34.1483926, lng: -118.284088});
+var Barcelona = new Booking("Barcelona", "Spain", 320, 20, "It's in Barcelona", {lat: 41.386333, lng: 2.189857599999982});
+var Adelaide = new Booking("Adelaide", "Australia", 200, 30, "It's in Adelaide", {lat: -34.9129458, lng: 138.6069437});
+var Vegas = new Booking("Las Vegas", "America", 420, 15, "It's in Las Vegas", {lat: 36.2620095, lng: -115.25776680000001});
 
 var bookings = [];
 bookings.push(Sydney);
@@ -161,14 +162,15 @@ function extend(x)
 	{
 		console.log(x);
 		currentBooking = newBookings[x];
-		$('#extendInfo').append('<h1>'+currentBooking.place+'</h1><p>'+currentBooking.country+'</p><p>$'+currentBooking.price+' a night</p><p>'+currentBooking.description+'</p><button onclick="book()">Book Now</button><button onclick="back()">back</button>');
+		$('#extendInfo').append('<div id="map"><p>'+currentBooking.location+'</p></div><h1>'+currentBooking.place+'</h1><p>'+currentBooking.country+'</p><p>$'+currentBooking.price+' a night</p><p>'+currentBooking.description+'</p><button onclick="book()">Book Now</button><button onclick="back()">back</button>');
 	}
 	else
 	{
 		currentBooking = bookings[x];
-		$('#extendInfo').append('<h1>'+currentBooking.place+'</h1><p>'+currentBooking.country+'</p><p>$'+currentBooking.price+' a night</p><p>'+currentBooking.description+'</p><button onclick="book()">Book Now</button><button onclick="back()">back</button>');
+		$('#extendInfo').append('<div id="map"><p>'+currentBooking.location+'</p></div><h1>'+currentBooking.place+'</h1><p>'+currentBooking.country+'</p><p>$'+currentBooking.price+' a night</p><p>'+currentBooking.description+'</p><button onclick="book()">Book Now</button><button onclick="back()">back</button>');
 	}
 	$('#extendInfo').show();
+	initMap(currentBooking.location);
 }
 
 function back()
@@ -212,4 +214,16 @@ function confirm()
 	$('#confirmation').append('<br><button onclick="book()">edit</button>');
 	$('#confirmation').append('<button onclick="back()">cancel</button>');
 	$('#confirmation').show();
+}
+function initMap(location) {
+	//var uni = bookings[i].Location
+	//var uni = {lat: -34.920603, lng: 138.60622769999998}
+	map = new google.maps.Map(document.getElementById('map'), {
+    	zoom: 15,
+    	center: location
+    });
+    var marker = new google.maps.Marker({
+   		position: location,
+    	map: map
+   	});
 }
