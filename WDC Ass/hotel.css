@@ -283,3 +283,12 @@ ul.nav li a:hover
 	background-color:white;
 	padding:20px;
 }
+#map
+{
+	background-color: red;
+	float: right;
+	display: block;
+	
+			height: 200px;
+			width: 400px;
+}
