@@ -170,7 +170,7 @@ function extend(x)
 		$('#extendInfo').append('<div id="map"><p>'+currentBooking.location+'</p></div><h1>'+currentBooking.place+'</h1><p>'+currentBooking.country+'</p><p>$'+currentBooking.price+' a night</p><p>'+currentBooking.description+'</p><button onclick="book()">Book Now</button><button onclick="back()">back</button>');
 	}
 	$('#extendInfo').show();
-	initMap(currentBooking.location);
+	initMap(x);
 }
 
 function back()
@@ -215,15 +215,25 @@ function confirm()
 	$('#confirmation').append('<button onclick="back()">cancel</button>');
 	$('#confirmation').show();
 }
-function initMap(location) {
-	//var uni = bookings[i].Location
+function initMap(x) {
+	var location = bookings[x].location;
 	//var uni = {lat: -34.920603, lng: 138.60622769999998}
 	map = new google.maps.Map(document.getElementById('map'), {
     	zoom: 15,
     	center: location
     });
+    var contentString = '<img src= "Pictures/Web-logo-blue.jpg" style="width:50px;height:50px;float:left;">'+
+    					'<h3>Supreme Hotel '+bookings[x].place+'</h3><hr>'+
+    					'<p>'+bookings[x].description+'</p>';
+    var infowindow = new google.maps.InfoWindow({
+    	maxWidth: 200,
+    	maxHeight: 100,
+    	content: contentString
+    });
     var marker = new google.maps.Marker({
    		position: location,
-    	map: map
+    	map: map,
+    	title: 'Supreme Hotel '+bookings[x].place+''
    	});
+    infowindow.open(map,marker);
 }
