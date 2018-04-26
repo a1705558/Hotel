@@ -71,7 +71,8 @@ div.logo
 	top:0px;
 	right:0px;
 	position: absolute;
-	background-color: #7FDBFF;
+	background-image: url("Pictures/Web-logo-blue.jpg");
+	background-size: 100%;
 	position:right top;
 }
 
