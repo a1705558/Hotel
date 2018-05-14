@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="stylesheets/hotel.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="javascripts/hotel.js"></script>
+	<title>Hotel Website</title>
+</head>
+<body class="normal">
+	<div class="logo" onclick="location.href = 'index.html'"></div>
+	<div class="header"></div>
+	<div class="navbar">
+		<ul class="nav">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="destinations.html">Destinations</a></li>
+			<li><a href="offers.html">Offers</a></li>
+			<li><a href="account.html">Account</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><input class="search" type="text" placeholder="Search Hotels..."></li>
+		</ul>
+	</div>
+	<div id="content">
+		<div id="map"></div>
+		<div id="searchBar">
+			<div class="sleft">
+			<p>Check In:</p>
+			<input type="date" id="start">
+			<p>Check Out:</p>	
+			<input type="date" id="end">
+			</div>
+			<div class="sright">
+			<p>Number of rooms:</p>
+			<input id="rooms" type="number" name="rooms">
+			<br>
+			<button id="searcher">Search!</button>
+			</div>
+			<div class="scenter">
+			<p>Country:</p>
+			<input id="country" type="text" name="country" required>
+			<p>Price:</p>
+			<input id="price" type="number" name="price">
+			</div>
+		</div>
+	</div>
+	<div id="places"><span style="display:none;">No items were found for your search</span></div>
+	<div id="extendInfo">
+		<div id="smap"></div>
+	</div>
+	<div id="booking"></div>
+	<div id="confirmation"></div>
+	<div id="footer">
+		<p>Supreme Hotels - International Ties.    Copyright 2018</p>
+	</div>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVURvmQ-f0eDocN2W8jvSXZ907edXZNBo&callback=initMap" type="text/javascript"></script>
+</body>
+</html>

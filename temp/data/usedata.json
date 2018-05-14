@@ -1,0 +1,4 @@
+[
+	{"firstname":"John","lastname":"Smith","address":"123 Fake Street, Faketown, New Jersey","email":"johnsmith@johnmail.com","password":"password","bookings":["Adelaide","Melbourne"],"phone":"01100101"},
+	{"firstname":"L.","lastname":"Mao","address":"No idea","email":"email@email.com","password":"lmao","bookings":[],"phone":"87654321"}
+]

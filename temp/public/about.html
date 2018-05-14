@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="stylesheets/hotel.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="javascripts/hotel.js"></script>
+	<title>Hotel Website</title>
+</head>
+<body class="normal">
+	<div class="logo" onclick="location.href = 'index.html'"></div>
+	<div class="header"></div>
+	<div class="navbar">
+		<ul class="nav">
+			<li><a onclick="homeHome()">Home</a></li>
+			<li><a onclick="homeDest()">Destinations</a></li>
+			<li><a onclick="homeOffers()">Offers</a></li>
+			<li><a href="account.html">Account</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><input class="search" type="text" placeholder="Search Hotels..."></li>
+		</ul>
+	</div>
+	<div id="content">
+		<p>
+		Supreme Hotels offers the most luxurious staying experience in any region of the world.<br> 
+		Each room is tailored to the needs of the customer allowing for a wide variety of rooms 
+		with smart innovative designs. <br> Every room design comes with the concept that each and every single 
+		customer is our guest, and as hosts we will ensure their comforts and needs are met. 		
+		</p>
+		<img src="stylesheets/Pictures/supreme.jpg" alt="supreme hotels is the best and everyone loves it">
+	</div>
+	<div id="footer">
+		<p>Supreme Hotels - International Ties.    Copyright 2018</p>
+	</div>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVURvmQ-f0eDocN2W8jvSXZ907edXZNBo&callback=initMap" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="stylesheets/hotel.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="javascripts/test.js"></script>
+	<title>Hotel Website</title>
+</head>
+<body class="normal">
+	<div class="logo" onclick="location.href = 'index.html'"></div>
+	<div class="header"></div>
+	<div class="navbar">
+		<ul class="nav">
+			<li><a onclick="openHome()">Home</a></li>
+			<li><a onclick="openDests()">Destinations</a></li>
+			<li><a onclick="openOffers()">Offers</a></li>
+			<li><a href="account.html">Account</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><input class="search" type="text" placeholder="Search Hotels..."></li>
+		</ul>
+	</div>
+
+	<div id="home">
+		<div class="basicsearch">
+			<p>Where?</p>
+			<input id="homeplace">
+			<p>Check In</p>
+			<input id="homestart">
+			<p>Check Out</p>
+			<input id="homeend">
+			<button onclick="homeSearch()">GO</button>
+		</div>
+		<div class="homecontent">
+			<h1>Discover Adventure</h1>
+		</div>
+		<div class="adventure"></div>
+		<div class="homecontent">
+			<h1>Discover Relaxation</h1>
+		</div>
+		<div class="relax"></div>
+		<div class="homecontent"><h1>Discover New</h1></div>
+		<div class="new"></div>
+	</div>
+
+	<div id="destinations" style="display:none;">
+		<div id="content">
+			<div id="map"></div>
+			<div id="searchBar">
+				<div class="sleft">
+				<p>Check In:</p>
+				<input type="date" id="start">
+				<p>Check Out:</p>	
+				<input type="date" id="end">
+				</div>
+				<div class="sright">
+				<p>Number of rooms:</p>
+				<input id="rooms" type="number" name="rooms">
+				<br>
+				<button id="searcher">Search!</button>
+				</div>
+				<div class="scenter">
+				<p>Country:</p>
+				<input id="country" type="text" name="country" required>
+				<p>Price:</p>
+				<input id="price" type="number" name="price">
+				</div>
+			</div>
+		</div>
+		<div id="places"><span style="display:none;">No items were found for your search</span></div>
+		<div id="extendInfo">
+			<div id="smap"></div>
+		</div>
+		<div id="commentSection" style="display:none;">
+			<div id="newComment">
+				<textarea id="newreview" value="write a review"></textarea>
+				<button onclick="addReview()">Add Review</button>
+			</div>
+			<div id="comments"></div>
+		</div>
+		<div id="booking"></div>
+		<div id="confirmation"></div>
+	</div>
+
+	<div id="offers" style="display:none;">
+		<div id="ocontent">
+			<div class="oheading">
+				<h1 style="color:white">Current Offers:</h1>
+			</div>
+			<div class="offer">
+				<img class="offer" src="stylesheets/Pictures/Tokyo_Hotel.jpg" alt="Tokyo">
+			</div>
+			<div class="offer">
+				<img class="offer" src="stylesheets/Pictures/Melbourne_Hotel.jpg" alt="Melbourne">
+			</div>
+			<div class="offer">
+				<img class="offer" src="stylesheets/Pictures/Glenelg_Hotel.jpg" alt="Glenelg">
+			</div>
+			<div class="offer" onclick="offerSelect('Adelaide')">
+				<img class="offer" src="stylesheets/Pictures/Adelaide_Hotel.jpg" alt="Adelaide">
+			</div>
+			<div class="offer">
+				<img class="offer" src="stylesheets/Pictures/Sydeny_Hotel.jpg" alt="Sydney">
+			</div>
+			<div class="offer">
+				<img class="offer" src="stylesheets/Pictures/effiel.jpg" alt="Paris">
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<p>Supreme Hotels - International Ties.    Copyright 2018</p>
+	</div>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVURvmQ-f0eDocN2W8jvSXZ907edXZNBo&callback=initMap" type="text/javascript"></script>
+</body>
+</html>
