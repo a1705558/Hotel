@@ -7,6 +7,44 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="hotel.js"></script>
 	<title>Hotel Website</title>
+
+	<!--> Google ID and API ID</!-->
+
+	<meta name="google-signin-client_id" content="1032701020230-o07d57p9cr8c0o0e0eko089mptqa00e9.apps.googleusercontent.com">
+	<script src="https://apis.google.com/js/client:platform.js?onload=renderButton" async defer></script>
+	<script src="jquery.min.js"></script>
+	
+
+	<!--> Google Button Scripts!</!-->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+		  <script src="https://apis.google.com/js/api:client.js"></script>
+		  <script>
+		  var googleUser = {};
+		  var startApp = function() {
+		    gapi.load('auth2', function(){
+		      // Retrieve the singleton for the GoogleAuth library and set up the client.
+		      auth2 = gapi.auth2.init({
+		        client_id: '1032701020230-o07d57p9cr8c0o0e0eko089mptqa00e9.apps.googleusercontent.com',
+		        cookiepolicy: 'single_host_origin',
+		        // Request scopes in addition to 'profile' and 'email'
+		        //scope: 'additional_scope'
+		      });
+		      attachSignin(document.getElementById('customBtn'));
+		    });
+		  };
+
+		  function attachSignin(element) {
+		    console.log(element.id);
+		    auth2.attachClickHandler(element, {},
+		        function(googleUser) {
+		          document.getElementById('name').innerText = "Signed in: " +
+		              googleUser.getBasicProfile().getName();
+		        }, function(error) {
+		          alert(JSON.stringify(error, undefined, 2));
+		        });
+		  }
+		  </script>
+
 </head>
 <body class="normal">
 	<div class="logo" onclick="location.href = 'index.html'"></div>
@@ -20,6 +58,20 @@
 			<li><a href="about.html">About</a></li>
 		</ul>
 	</div>
+
+        <hr/>
+        <!--> Google Button</!-->
+			<div id="gSignInWrapper">
+			    <span class="label">Sign in with:</span>
+			    <div id="customBtn" class="customGPlusSignIn">
+			      <span class="icon"></span>
+			      <span class="buttonText">Google</span>
+			    </div>
+			  </div>
+			  <div id="name"></div>
+			  <script>startApp();</script>
+		<hr>
+
 	<div id="content">
 		<div id="searchBar">
 			<p>Start Date:</p>
@@ -42,5 +94,8 @@
 	    <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdeJRqLpVpZ-PPy3O9BlXtvx4p9-vuEGE&callback=initMap">
     </script>
+
+
+
 </body>
 </html>
